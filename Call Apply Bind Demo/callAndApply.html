@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+
+var object1 = {
+firstName : "Surekha",
+lastName : "Gadkari"
+}
+
+var object2= {
+firstName : "Deeparthi",
+lastName : "Wani"
+}
+
+var  displayEmpDetails = function(empNum, country){
+return "Full Name : " + this.firstName + " " +this.lastName + " Emp Number : "+ empNum + " Country : "+ country;
+}
+
+//Syntax : functionName.call(thisObject, parameters)
+
+//------------------- Call ----------------------
+console.log("call Demo :");
+console.log(displayEmpDetails.call(object1, 10, "IN")); 
+console.log(displayEmpDetails.call(object2, 20, "BR"));
+
+//------------------- apply------------------------
+// var emp1 =[10, 'IN'];
+// var emp2 =[20, 'BR'];
+// console.log("Apply Demo :");
+// console.log(displayEmpDetails.apply(object1, emp1)); 
+// console.log(displayEmpDetails.apply(object2, emp2));
+
+</script>
+</head>
+<body>
+
+<h1> Call and Apply Demo (with parameterised functions)</h1>
+</body>
+
+</html>

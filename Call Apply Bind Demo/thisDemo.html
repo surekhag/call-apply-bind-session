@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script>
+
+    </script>
+</head>
+
+<body>
+
+    <h1> Call and Apply Demo</h1>
+    <h2>The JavaScript <b>this</b> Keyword</h2>
+
+    <button id='removeButton'>Click Me!</button>
+</body>
+<script>
+
+    // "use strict";
+
+
+    // 1. In a method, this refers to the owner object.
+    var object1 = {
+        firstName: "Surekha",
+        lastName: "Gadkari",
+        displayThisVal: function () {
+            //  console.log(this);
+            return this;
+        }
+    }
+    console.log("1. In a Method : \n", object1.displayThisVal());
+
+    //2. Alone, this refers to the global object.
+    var x = this;
+    console.log("\n2. Alone : \n", x);
+
+    //3. In strict mode, when used alone, this also refers to the Global object 
+
+    var y = this;
+    console.log("\n3. Strict Mode  : \n", y);
+
+
+    //4. in a Function (Default Mode)
+    function myFunction() {
+        return this;
+    }
+    console.log("\n4. In a function : \n", myFunction());
+
+    //5. In a Function (Strict Mode - undefined)        
+    function myFunctionStrict() {
+        return this;
+    }
+    console.log("\n5. In a function - Strict MOde: \n", myFunctionStrict());
+    //6. Event Handling
+    document.getElementById('removeButton').onclick = function () {
+        console.log("6. Event Handling");
+        console.log(this);
+    };
+
+</script>
+
+</html>

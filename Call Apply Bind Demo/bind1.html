@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script>
+        this.x = 9;
+        
+        var test = {
+            x: 81,
+            getX: function () {
+                return this.x;
+            }
+        };
+        console.log(test.getX()); // 81
+
+
+        var retrieveX = test.getX;
+        console.log(retrieveX()); // 9
+        /*
+          var retrieveX = function() {
+            return this.x;
+          };
+        */
+
+
+        var hello = {
+            x: 100,
+            getX: function () {
+                return this.x;
+            }
+        }
+        var boundGetX = retrieveX.bind(hello);
+        console.log(boundGetX()); // 100
+/*
+          var retrieveX = hello = {
+            x: 100,
+            getX: function() {
+              return this.x;
+            }
+          };
+        */
+    </script>
+</head>
+
+<body>
+    Bind Method Demo
+</body>
+
+</html>

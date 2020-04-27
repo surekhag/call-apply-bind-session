@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+
+var object1 = {
+firstName : "Surekha",
+lastName : "Gadkari",
+displayFullName : function(){
+return "Full Name : " + this.firstName + " " +this.lastName;
+}
+}
+
+var object2= {
+firstName : "Deeparthi",
+lastName : "Wani",
+displayFullName : function(){
+return "Full Name : " + this.firstName + " " +this.lastName;
+}
+}
+
+console.log(object1.displayFullName());
+console.log(object2.displayFullName());
+
+// var  displayFullName = function(){
+// return "Full Name : " + this.firstName + " " +this.lastName;
+// }
+
+// console.log(displayFullName.call(object1)); 
+// console.log(displayFullName.call(object2)); 
+
+//Syntax : functionName.call(thisObject, parameters)
+
+</script>
+</head>
+<body>
+
+<h1> Call Method Demo</h1>
+</body>
+
+</html>
